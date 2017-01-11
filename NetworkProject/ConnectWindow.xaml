@@ -1,0 +1,35 @@
+﻿<Window x:Class="NetworkProject.ConnectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ConnectWindow" Height="600" Width="800" KeyDown="ConnectWindow_KeyDown" KeyUp="ConnectWindow_KeyUp" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <Image Name="ShowImage" Stretch="None" Focusable="True" MouseMove="ShowImage_MouseMove" MouseDown="ShowImage_MouseDown" MouseUp="ShowImage_MouseUp" MouseWheel="ShowImage_MouseWheel"/>
+        </ScrollViewer>
+        <Border Name="UpperBorder" Height="30" Width="330" VerticalAlignment="Top" Background="CornflowerBlue" CornerRadius="15" MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave">
+            <Grid Margin="15 2 15 2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="上传文件" Click="UploadButtonClick" Width="80" FontSize="18"/>
+                <Button Content="下载文件" Click="DownloadButtonClick" Grid.Column="1" Width="80" FontSize="18"/>
+                <Grid Name="FileStatusGrid" Visibility="Hidden" Grid.ColumnSpan="2" Background="CornflowerBlue">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="60"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="文件进度" FontSize="18" FontWeight="Bold"/>
+                    <ProgressBar Name="FileProgressBar" Grid.Column="1"/>
+                    <Button Content="取消" Click="CancelButtonClick" Grid.Column="2" Width="50" FontSize="18"/>
+                </Grid>
+                <Button Name="FullScreenButton" Content="全屏" FontSize="18" Click="FullScreenButtonClick" Grid.Column="2" Width="80"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

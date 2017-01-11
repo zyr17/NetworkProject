@@ -1,0 +1,31 @@
+﻿<Window x:Class="NetworkProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="远程桌面系统" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"/>
+        <TextBlock Text="主机IP" Grid.Row="1" FontSize="24" VerticalAlignment="Center"/>
+        <TextBox Name="IPTextBox" Text="192.168.1.203" Grid.Row="1" FontSize="20" Height="26" Width="160" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0"/>
+        <TextBlock Text="端口号" Grid.Row="1" Grid.Column="1" FontSize="24" VerticalAlignment="Center"/>
+        <TextBox Name="PortTextBox" Text="1223" Grid.Row="1" Grid.Column="1" FontSize="20" Height="26" Width="160" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 0 0"/>
+        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="密码（无则留空）" FontSize="24" VerticalAlignment="Center"/>
+            <PasswordBox Name="PasswordPasswordtBox" Password="123456" Grid.Row="1" Grid.Column="1" FontSize="20" Height="26" Width="270" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 0 0"/>
+        </Grid>
+        <Button Click="Button_Click" Content="连接" Grid.Row="3" Grid.ColumnSpan="2" FontSize="24" Height="36" Margin="0 0 0 0"/>
+    </Grid>
+</Window>

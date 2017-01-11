@@ -1,0 +1,8 @@
+服务端及相关文件：
+NetworkProjectServer.exe - 服务端主程序
+server.txt - 可选配置文件，第一行为指定端口，第二行为指定密码
+客户端及相关文件：
+NetworkProjectClient.exe - 客户端主程序
+MiniLZO.dll - 开源压缩算法的动态链接库
+默认编译环境：Visual Studio 2013
+默认运行环境：Windows7及以上，.NET Framework 4及以上
